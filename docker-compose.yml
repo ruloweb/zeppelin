@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  notebook:
+    image: ruloweb/zeppelin:0.8.0
+    volumes:
+      - ./notebook:/notebook
+    environment:
+      - ZEPPELIN_NOTEBOOK_DIR=/notebook
+    ports:
+      - 8080:8080
